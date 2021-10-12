@@ -1,0 +1,175 @@
+$clr-violet: hsl(257, 40%, 49%);
+$clr-magenta: hsl(300, 69%, 71%);
+$clr-white: #ffffff;
+$screen-mobile: 375px;
+$screen-tablet: 768px;
+$screen-desktop: 1200px;
+$screen-large-desktop: 1600px;
+@mixin min-responsive ($media) {
+	@media (min-width: $media) { @content; }
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 16px;
+    @include min-responsive($screen-desktop) {
+        font-size: 18px;
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('images/bg-mobile.svg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: $clr-violet;
+    padding: 2.2rem;
+    color: $clr-white;
+    @include min-responsive($screen-desktop) {
+        background-image: url('images/bg-desktop.svg');
+        background-size: cover;
+        background-position: top center;
+        padding: 3rem;
+    }
+    @include min-responsive($screen-large-desktop) {
+        padding: 3rem 10%;
+    }
+}
+
+img {
+    max-width: 100%;    
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    vertical-align: top;
+    -ms-interpolation-mode: bicubic;
+    border-style: none;
+}
+
+p {
+    line-height: 1.5;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+button, .button {
+    border: 0;
+    outline: 0;
+    background: initial;
+    font-size: .9rem;
+    padding: .5rem 4rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all .5s ease;
+    @include min-responsive($screen-desktop) {
+        padding: .7rem 3rem;
+        border-radius: 30px;
+    }
+    &-register {
+        background: $clr-white;
+        color: $clr-violet;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        margin-bottom: 1rem;
+        &:hover {
+            background-color: $clr-magenta;
+            color: $clr-white;
+        }
+    }
+}
+
+.header {
+    &__logo {
+        max-width: 120px;
+    }
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3rem 0;
+    gap: 2rem;
+    @include min-responsive($screen-desktop) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    &__image {
+        min-width: 50vw;
+    }
+    &__detail {
+        text-align: center;
+        @include min-responsive($screen-desktop) {
+            text-align: left;
+        }
+    }
+    &__title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+        @include min-responsive($screen-desktop) {
+            font-size: 2.2rem;
+            margin-top: 3rem;
+        }
+    }
+    &__desc {
+        margin: 1rem 0;
+    }
+}
+
+.footer {
+    &__medsos {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1rem;
+        @include min-responsive($screen-desktop) {
+            justify-content: flex-end;
+        }
+    }
+    &__icon {
+        border-radius: 50%;
+        border: 1px solid $clr-white;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:hover {
+            border-color: $clr-magenta;
+            svg {
+                fill: $clr-magenta;
+            }
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: $clr-white;
+        }
+    }
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+    margin-top: 1.5rem;
+    a { 
+        color: hsl(228, 57%, 77%); 
+        &:hover {
+            color: $clr-magenta;
+        }
+    }
+}

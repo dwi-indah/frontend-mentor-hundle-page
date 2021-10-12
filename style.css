@@ -1,0 +1,233 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("images/bg-mobile.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #674baf;
+  padding: 2.2rem;
+  color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-image: url("images/bg-desktop.svg");
+    background-size: cover;
+    background-position: top center;
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    padding: 3rem 10%;
+  }
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic;
+  border-style: none;
+}
+
+p {
+  line-height: 1.5;
+  -webkit-margin-before: 0px;
+          margin-block-start: 0px;
+  -webkit-margin-after: 0px;
+          margin-block-end: 0px;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+}
+
+button, .button {
+  border: 0;
+  outline: 0;
+  background: initial;
+  font-size: .9rem;
+  padding: .5rem 4rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+@media (min-width: 1200px) {
+  button, .button {
+    padding: .7rem 3rem;
+    border-radius: 30px;
+  }
+}
+
+button-register, .button-register {
+  background: #ffffff;
+  color: #674baf;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+
+button-register:hover, .button-register:hover {
+  background-color: #e882e8;
+  color: #ffffff;
+}
+
+.header__logo {
+  max-width: 120px;
+}
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 3rem 0;
+  gap: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .intro {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.intro__image {
+  min-width: 50vw;
+}
+
+.intro__detail {
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .intro__detail {
+    text-align: left;
+  }
+}
+
+.intro__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+  .intro__title {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+  }
+}
+
+.intro__desc {
+  margin: 1rem 0;
+}
+
+.footer__medsos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .footer__medsos {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+.footer__icon {
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.footer__icon:hover {
+  border-color: #e882e8;
+}
+
+.footer__icon:hover svg {
+  fill: #e882e8;
+}
+
+.footer__icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.attribution a {
+  color: #a3b0e6;
+}
+
+.attribution a:hover {
+  color: #e882e8;
+}
+/*# sourceMappingURL=style.css.map */
